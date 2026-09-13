@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Srujanesh Gunda · Security Engineer</title>
+  <meta name="description" content="Security engineer specializing in compliance, cloud security, application security, and agentic AI security.">
+  <meta property="og:title" content="Srujanesh Gunda · Security Engineer">
+  <meta property="og:description" content="Security engineering across compliance, cloud security, application security, and agentic AI systems.">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0e0e0c;
+      --text: #eceae4;
+      --muted: #9a978c;
+      --line: rgba(255, 255, 255, .08);
+      --line-strong: rgba(255, 255, 255, .12);
+      --pill-bg: rgba(255, 255, 255, .04);
+      --cta-bg: #eceae4;
+      --cta-text: #131311;
+      --serif: "Instrument Serif", Georgia, serif;
+      --sans: "Inter", -apple-system, sans-serif;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--sans);
+      font-size: 15px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    ::selection { background: rgba(236, 234, 228, .2); }
+
+    a { color: inherit; text-decoration: none; }
+    a:focus-visible { outline: 2px solid var(--muted); outline-offset: 3px; border-radius: 4px; }
+
+    /* Vertical hairlines framing the content column */
+    .frame {
+      position: fixed;
+      inset: 0;
+      max-width: 1120px;
+      margin: 0 auto;
+      border-left: 1px solid var(--line);
+      border-right: 1px solid var(--line);
+      pointer-events: none;
+    }
+
+    /* ---- Nav ---- */
+    nav {
+      position: sticky;
+      top: 20px;
+      z-index: 10;
+      display: flex;
+      justify-content: center;
+      padding: 20px 16px 0;
+    }
+
+    .nav-pill {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      padding: 7px 8px 7px 20px;
+      background: var(--pill-bg);
+      border: 1px solid var(--line-strong);
+      border-radius: 999px;
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+
+    .brand {
+      font-weight: 600;
+      font-size: 14px;
+      letter-spacing: -.01em;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 22px;
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .nav-links a:hover { color: var(--text); }
+
+    .nav-btn {
+      font-size: 13px;
+      font-weight: 500;
+      padding: 7px 16px;
+      border: 1px solid var(--line-strong);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, .05);
+    }
+
+    .nav-btn:hover { background: rgba(255, 255, 255, .1); }
+
+    /* ---- Hero ---- */
+    .hero {
+      max-width: 880px;
+      margin: 0 auto;
+      padding: 150px 24px 140px;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-family: var(--serif);
+      font-weight: 400;
+      font-size: clamp(44px, 7vw, 76px);
+      line-height: 1.06;
+      letter-spacing: -.01em;
+    }
+
+    .hero .sub {
+      margin: 28px auto 0;
+      max-width: 540px;
+      color: var(--muted);
+      font-size: 15.5px;
+    }
+
+    .cta {
+      display: inline-block;
+      margin-top: 44px;
+      padding: 13px 30px;
+      background: var(--cta-bg);
+      color: var(--cta-text);
+      font-size: 14px;
+      font-weight: 500;
+      border-radius: 999px;
+      transition: opacity .15s ease, transform .15s ease;
+    }
+
+    .cta:hover { opacity: .88; transform: translateY(-1px); }
+
+    /* ---- Focus ---- */
+    .focus {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 0 24px 120px;
+      scroll-margin-top: 100px;
+    }
+
+    .section-label {
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--muted);
+      padding-bottom: 20px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .cell { padding: 44px 40px; }
+
+    .cell:nth-child(odd) { border-right: 1px solid var(--line); }
+    .cell:nth-child(-n+2) { border-bottom: 1px solid var(--line); }
+
+    .cell .index {
+      display: block;
+      font-size: 12px;
+      color: var(--muted);
+      letter-spacing: .1em;
+      margin-bottom: 20px;
+    }
+
+    .cell h3 {
+      font-family: var(--serif);
+      font-weight: 400;
+      font-size: 27px;
+      letter-spacing: -.01em;
+      margin-bottom: 10px;
+    }
+
+    .cell p {
+      color: var(--muted);
+      font-size: 14.5px;
+      max-width: 400px;
+    }
+
+    /* ---- Footer ---- */
+    footer {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 100px 24px 48px;
+      text-align: center;
+      scroll-margin-top: 100px;
+    }
+
+    footer h2 {
+      font-family: var(--serif);
+      font-weight: 400;
+      font-size: clamp(36px, 5vw, 52px);
+      letter-spacing: -.01em;
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 32px;
+      margin-top: 36px;
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    .footer-links a { border-bottom: 1px solid var(--line-strong); padding-bottom: 2px; }
+    .footer-links a:hover { color: var(--text); border-bottom-color: var(--text); }
+
+    .copyright {
+      margin-top: 80px;
+      font-size: 12.5px;
+      color: var(--muted);
+    }
+
+    /* ---- Responsive ---- */
+    @media (max-width: 720px) {
+      .grid { grid-template-columns: 1fr; }
+      .cell:nth-child(odd) { border-right: none; }
+      .cell:nth-child(-n+2) { border-bottom: none; }
+      .cell:not(:last-child) { border-bottom: 1px solid var(--line); }
+      .cell { padding: 36px 24px; }
+      .hero { padding: 110px 24px 100px; }
+    }
+
+    @media (max-width: 560px) {
+      .nav-links { display: none; }
+      .nav-pill { gap: 16px; padding-left: 16px; }
+      .frame { border: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="frame" aria-hidden="true"></div>
+
+  <nav>
+    <div class="nav-pill">
+      <a class="brand" href="#">Srujanesh Gunda</a>
+      <div class="nav-links">
+        <a href="#focus">Focus</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <a class="nav-btn" href="#">Resume</a>
+    </div>
+  </nav>
+
+  <main>
+    <section class="hero">
+      <h1>Security engineering for cloud, compliance &amp; code.</h1>
+      <p class="sub">I help teams ship securely across compliance, cloud security, application security, and agentic AI systems.</p>
+      <a class="cta" href="mailto:you@example.com">Get in touch</a>
+    </section>
+
+    <section class="focus" id="focus">
+      <h2 class="section-label">Focus</h2>
+      <div class="grid">
+        <div class="cell">
+          <span class="index">01</span>
+          <h3>Compliance</h3>
+          <p>SOC 2, ISO 27001, and HIPAA/PCI scoping. Control mapping, audit readiness, and GRC automation that holds up under review.</p>
+        </div>
+        <div class="cell">
+          <span class="index">02</span>
+          <h3>Cloud Security</h3>
+          <p>AWS, GCP, and Azure hardening: IAM, CSPM, IaC scanning, segmentation, and detection built into the platform.</p>
+        </div>
+        <div class="cell">
+          <span class="index">03</span>
+          <h3>Application Security</h3>
+          <p>Threat modeling, secure code review, SAST/DAST, API security, and vulnerability management across the SDLC.</p>
+        </div>
+        <div class="cell">
+          <span class="index">04</span>
+          <h3>Agentic Security</h3>
+          <p>Securing LLM agents and toolchains: tool-use boundaries, prompt-injection defense, MCP review, and guardrails.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="contact">
+    <h2>Get in touch</h2>
+    <div class="footer-links">
+      <a href="mailto:you@example.com">Email</a>
+      <a href="#">LinkedIn</a>
+      <a href="#">GitHub</a>
+    </div>
+    <p class="copyright">&copy; 2026 Srujanesh Gunda</p>
+  </footer>
+</body>
+</html>
